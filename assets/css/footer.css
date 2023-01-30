@@ -1,0 +1,47 @@
+@import url(config_global.css);
+
+.footer {
+    height: 200px;
+}
+
+.container-footer, 
+.container-footer-menu {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container-footer-menu {
+    margin-left: 25px;
+    padding-bottom: 25px;
+}
+
+.footer-links {
+    color: var(--cor-secundary);
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.footer-links:hover {
+    transition: 0.5s ease;
+    color: var(--cor-primary);
+    font-weight: bold;
+}
+
+.footer-links_contact:hover {
+    color: var(--cor-secundary);
+    font-weight: normal;
+}
+
+.footer-logo {
+    align-self: flex-start;
+}
+
+@media (max-width: 800px) {
+    .footer-logo {
+        padding-bottom: 30px;
+    }
+
+    .container-footer-menu {
+        margin: 0;
+    }
+}

@@ -1,0 +1,371 @@
+@import url(config_global.css);
+@import url(margins.css);
+@import url(footer.css);
+@import url(nav.css);
+
+body {
+    font-family: var(--font-primary);
+    transition: overflow 0.5s ease;
+}
+
+#start, #location {
+    padding-top: 70px;
+    height: 500px;
+}
+
+#location {
+    font-size: 18px;
+    height: 575px;
+    display: flex;
+    align-items: space-between;
+}
+
+.ramem {
+    position: relative;
+    padding-top: 80px;
+    transition: var(--temp-animation);
+}
+
+.ramem:hover {
+    transform: scale(1.075);
+}
+
+.container {
+    max-width: 900px;
+    width: 90%;
+    height: 100%;
+    margin: auto;
+}
+
+.container-start,
+.container-nav,
+.container-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-column, 
+.card, .section-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-centralizado {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Cards */
+
+.card {
+    background-color: var(--cor-quartetary);
+    border-radius: 32px;
+}
+
+.card-ramem {
+    width: 285px;
+    height: 300px;
+    justify-content: flex-end;
+    padding-bottom: 25px;
+}
+
+.card-ramem-text {
+    align-items: center;
+}
+
+.card-comment {
+    height: 225px;
+    width: 375px;
+
+    padding: 25px;
+    border-radius: 16px;
+
+    align-items: flex-start;
+    transition: var(--temp-animation);
+}
+
+.card-comment:hover {
+    transform: scale(1.05);
+}
+
+.section-stars {
+    cursor: alias;
+}
+
+/* Texto */
+
+.section-text {
+    width: 375px;
+}
+
+.text-centralized {
+    text-align: center;
+}
+
+.title, .subtitle {
+    color: var(--cor-tertiary);
+    font-family: var(--font-secundary);
+}
+
+.title {
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.subtitle {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.paragraph,
+.link, .input,
+.input::placeholder {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.paragraph {
+    line-height: 1.5em;
+    color: var(--cor-tertiary);
+}
+
+.paragraph-ramem {
+    color: var(--cor-secundary);
+    font-size: 14px;
+    width: 200px;
+}
+
+.paragraph-ramem::selection {
+    background-color: var(--cor-secundary);
+}
+
+.paragraph-cost {
+    font-family: var(--font-secundary);
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.paragraph-comment {
+    font-size: 16px;
+    font-family: var(--font-secundary);
+    width: 300px;
+}
+
+/* Links */
+
+.link {
+    color: var(--cor-primary);
+    transition: var(--temp-animation);
+}
+
+.link:hover {
+    color: var(--cor-secundary);
+    font-weight: bold;
+}
+
+/* Entrada */
+
+.input {
+    background: var(--cor-quintetary);
+    min-width: 100px;
+    width: 330px;
+    padding: 15px;
+    border: 1px solid var(--cor-tertiary);
+    border-left: 0px;
+}
+
+.input::placeholder {
+    line-height: 1.5em;
+    color: var(--cor-tertiary);
+}
+
+.input:focus {
+    box-shadow: 0 0 0 0;
+    border-left: 0 none;
+    outline: 0;
+}
+
+/* Imagens */
+
+.img {
+    width: 100%;
+}
+
+.img-sushi {
+    max-width: 300px;
+}
+
+.img-resept, 
+.img-map {
+    border-radius: 16px;
+}
+
+.picture-img-resept {
+    max-width: 423px;
+    margin: 0px 25px 25px 0px;
+}
+
+.img-resept {
+    float: left;
+    max-width: 423px;
+}
+
+.img-ramem {
+    height: 200px;
+    z-index: 0;
+    margin: 0 auto;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.img-ramem:hover {
+    transition: 1.75s ease;
+    transform: rotate(45deg);
+}
+
+.img-profile {
+    height: 75px;
+}
+
+.img-profile:hover {
+    filter: grayscale(0.6);
+}
+
+.img-star {
+    width: 15px;
+}
+
+.img-star:hover {
+    transform: scale(1.2);
+    filter: brightness(1.1);
+}
+
+.img-location {
+    background: var(--cor-quintetary);
+    height: 22px;
+    padding: 15px 0px 15px 15px;
+
+    border: 1px solid var(--cor-tertiary);
+    border-right: 0px;
+    border-radius: 10px 0px 0px 10px;
+    transition: var(--temp-animation);
+}
+
+.img-map {
+    height: 367px;
+    width: calc(100% - 1%);
+    max-width: 900px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.img-map:hover {
+    transform: scale(1.025);
+}
+
+/* Botoẽs */
+
+.button {
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: bold;
+
+    max-width: 130px;
+    max-height: 36px;
+    cursor: pointer;
+
+    border-radius: 10px;
+    padding: 10px 90px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--temp-animation);
+}
+
+.button-start,
+.button-address {
+    background-color: var(--cor-primary);
+    color: var(--cor-quintetary);
+    border: none;
+}
+
+.button-start:hover,
+.button-address:hover {
+    background-color: var(--cor-secundary);
+}
+
+.button-address {
+    max-height: 90px;
+    padding: 10px 40px;
+    border-radius: 0 10px 10px 0;
+}
+
+.button-login {
+    border: 2px solid var(--cor-tertiary);
+    padding: 7px 40px;
+}
+
+.button-login:hover {
+    transform: scale(1.2);
+}
+
+/* Responsividade */
+
+@media (max-width: 1000px) {
+    .container-card {
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 780px) {
+    #start {
+        height: 300px;
+    }
+
+    .container-start {
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .img-sushi {
+        display: none;
+    }
+
+    .paragraph,
+    .title {
+        text-align: center;
+    }
+
+    .button-start, 
+    .link {
+        align-self: center;
+    }
+
+    .button-start {
+        padding: 10px 175px;
+    }
+
+    .picture-img-resept {
+        margin: 0px 0px 50px 0px;
+    }
+
+    .card-comment {
+        align-items: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .footer-subtitle {
+        font-size: 20px;
+        font-weight: normal;
+        color: var(--cor-secundary);
+    }
+}

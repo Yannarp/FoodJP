@@ -1,0 +1,141 @@
+.nav {
+    background-color: white;
+    height: 70px;
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+}
+
+.logo {
+    height: 25px;
+    cursor: pointer;
+}
+
+.logo:hover {
+    filter: brightness(1.5);
+}
+
+.menu-link {
+    width: 300px;
+    list-style: none;
+}
+
+.menu, .menu-link {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-button {
+    display: none;
+}
+
+/* Links */
+
+.menu-links {
+    color: var(--cor-tertiary);
+    position: relative;
+    padding-bottom: 5px;
+
+    text-decoration: none;
+    font-size: 18px;
+    transition: var(--temp-animation);
+}
+
+.menu-links:hover {
+    color: var(--cor-primary);
+}
+
+.menu-links::after {
+    background-color: var(--cor-primary);
+    content: "";
+
+    position: absolute;
+    visibility: hidden;
+
+    width: 100%;
+    height: 3px;
+
+    bottom: 0;
+    left: 0;
+
+    transform: scaleX(0);
+    transition: var(--temp-animation);
+}
+
+.menu-links:hover::after {
+    visibility: visible;
+    transform: scaleX(110%);
+}
+
+/* Controle da Responsividade do menu */
+
+.menu-control {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.menu-control:checked + .menu {
+    transform: translateX(0);
+}
+
+/* Responsividade */
+
+@media (max-width: 700px) {
+    .menu {
+        background-color: var(--cor-quintetary);
+        box-shadow: -3px 0px 11px 13px rgba(0, 0, 0, 0.4);
+
+        top: 0;
+        right: 0;
+
+        height: 100%;
+        width: 50vw;
+
+        position: fixed;
+        z-index: 1;
+
+        transform: translateX(110%);
+        transition: transform 0.5s ease;
+    }
+
+    .menu-link {
+        height: 70%;
+        max-height: 500px;
+    }
+
+    .menu-link, .menu {
+        flex-direction: column;
+        flex-wrap: initial;
+
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .menu-icon {
+        display: inline-block;
+        z-index: 1;
+        cursor: pointer;
+    }
+
+    .menu-icon:hover {
+        filter: invert(33%) sepia(2%) saturate(68%) hue-rotate(314deg) brightness(83%) contrast(93%);
+    }
+
+    .item-button {
+        display: block;
+    }
+
+    .container-nav > .button-login {
+        display: none;
+    }
+}
+
+    @media (max-width: 550px) { 
+    .menu {
+        width: 75vw;
+    }
+}
